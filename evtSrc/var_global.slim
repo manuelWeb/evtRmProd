@@ -1,0 +1,80 @@
+/ change date - THEME
+-$date     = "0817"
+-$TH       = "TH12_ete"
+/ change ID rayon all country
+- $ID = { # ...,
+  fr: "1534",
+  bf: "1533",
+  bv: "1537",
+  nl: "1532",
+  de: "1536",
+  uk: "1535"}
+/ change > pdtfr > FR; etc...
+-pdtfr = ["0", "sante-beaute/sante-confort/ventilateur-rechargeable/2505410.html", "vetements-accessoires/chaussures-femme/trotteurs-ajoures-beige-taille-37/3455029.html", "vetements-accessoires/vetements/robe-plage-marine-taille-m/1773126.html"]
+-pdtbf = ["0", "sante-beaute/sante-confort/ventilateur-rechargeable/2505410.html", "vetements-accessoires/chaussures-femme/trotteurs-ajoures-beige-taille-37/3455029.html", "vetements-accessoires/vetements/robe-plage-marine-taille-m/1773126.html"]
+-pdtbv = ["0", "gezondheid-schoonheid/gezondheid-comfort/oplaadbare-ventilator/2505410.html", "kleding-accessoires/vrouwenschoenen/wandelschoen-met-ajour-beige-maat-37/3455029.html", "kleding-accessoires/kledij/strandjurk-marineblauw-maat-m/1773126.html"]
+-pdtnl = ["0", "gezondheid-schoonheid/gezondheid-comfort/oplaadbare-ventilator/2505410.html", "kleding-accessoires/vrouwenschoenen/wandelschoen-met-ajour-beige-maat-37/3455029.html", "kleding-accessoires/kledij/strandjurk-marineblauw-maat-m/1773126.html"]
+-pdtde = ["0", "gesundheit-schonheit/gesundheit-komfort/aufladbarer-ventilator/2505410.html", "kleidung-zubehor/damenschuhe/ballerina-mit-lochmuster-beige-grosse-37/3455029.html", "kleidung-zubehor/kleidung/strandkleid-marineblau-grosse-m/1773126.html"]
+-pdtuk = ["0", "clothing-accessories/women-s-shoes/openwork-walking-shoes-beige-size-4/3455029.html", "clothing-accessories/clothes/beach-dress-navy-size-m/1773126.html", "clothing-accessories/bags-accessories/lace-sunshade/6595326.html"]
+
+/ change google PK x3 track
+-ggpk = { #...,
+  pck1: "'pk1_ventilateur-rechargeable_2505410', ", pck2: "'pk2_trotteurs-ajoures-beige-taille-37_3455029', ", pck3: "'pk3_robe-plage-marine-taille-m_1773126', ", pck4: "'nopdt_1234567', ",
+  pck1_bf: "'pk1_ventilateur-rechargeable_2505410', ", pck2_bf:   "'pk2_trotteurs-ajoures-beige-taille-37_3455029', ", pck3_bf: "'pk3_robe-plage-marine-taille-m_1773126', ", pck4_bf: "'nopdt_1234567', ",
+  pck1_de: "'pk1_ventilateur-rechargeable_2505410', ", pck2_de:   "'pk2_trotteurs-ajoures-beige-taille-37_3455029', ", pck3_de: "'pk3_robe-plage-marine-taille-m_1773126', ", pck4_de: "'nopdt_1234567', ",
+  pck1_nl: "'pk1_ventilateur-rechargeable_2505410', ", pck2_nl:  "'pk2_trotteurs-ajoures-beige-taille-37_3455029', ", pck3_nl: "'pk3_robe-plage-marine-taille-m_1773126', ", pck4_nl: "'nopdt_1234567', ",
+  pck1_bv: "'pk1_ventilateur-rechargeable_2505410', ", pck2_bv:   "'pk2_trotteurs-ajoures-beige-taille-37_3455029', ", pck3_bv: "'pk3_robe-plage-marine-taille-m_1773126', ", pck4_bv: "'nopdt_1234567', ",
+  pck1_uk: "'pk1_trotteurs-ajoures-beige-taille-37_3455029', ", pck2_uk:   "'pk2_robe-plage-marine-taille-m_1773126', ", pck3_uk: "'pk3_ombrelle-dentelle_6595326', ", pck4_uk: "'nopdt_1234567', ",
+  }
+
+// prix
+- $price = {# ,
+ fr: "Sélection<br />à partir de", ent: "4", dec: ".99", unit: "€", unituk: "£",
+ de: "Sortiment<br />ab", nl: "Selectie<br />vanaf", uk: "Selection<br />from",
+}
+
+// do not change > base URL
+-$urlfr = "https://www.tempsl.fr/fr/"
+-$urlIC = ["https://www.ideal-","pratique.be/befr/","praktijk.be/bevl/","praktisch.de/de/","praktijk.nl/nl/","practical.co.uk/uk/"]
+// do not change google track
+-ggstart = "ga('local.send', 'event', 'EncartHP', "
+-ggend = "document.location.pathname);"
+-$ggall = [0, ggstart+ggpk[:pck1]+ggend, ggstart+ggpk[:pck2]+ggend, ggstart+ggpk[:pck3]+ggend, ggstart+ggpk[:pck4]+ggend]
+-$ggall_bf = [0, ggstart+ggpk[:pck1_bf]+ggend, ggstart+ggpk[:pck2_bf]+ggend, ggstart+ggpk[:pck3_bf]+ggend, ggstart+ggpk[:pck4_bf]+ggend]
+-$ggall_de = [0, ggstart+ggpk[:pck1_de]+ggend, ggstart+ggpk[:pck2_de]+ggend, ggstart+ggpk[:pck3_de]+ggend, ggstart+ggpk[:pck4_de]+ggend]
+-$ggall_nl = [0, ggstart+ggpk[:pck1_nl]+ggend, ggstart+ggpk[:pck2_nl]+ggend, ggstart+ggpk[:pck3_nl]+ggend, ggstart+ggpk[:pck4_nl]+ggend]
+-$ggall_bv = [0, ggstart+ggpk[:pck1_bv]+ggend, ggstart+ggpk[:pck2_bv]+ggend, ggstart+ggpk[:pck3_bv]+ggend, ggstart+ggpk[:pck4_bv]+ggend]
+-$ggall_uk = [0, ggstart+ggpk[:pck1_uk]+ggend, ggstart+ggpk[:pck2_uk]+ggend, ggstart+ggpk[:pck3_uk]+ggend, ggstart+ggpk[:pck4_uk]+ggend]
+// do not change
+- $pck1 = { #...,
+  fr: "#{$urlfr}#{pdtfr[1]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtbf[1]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[1]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[1]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[1]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[1]}",
+  }
+- $pck2 = { #...,
+  fr: "#{$urlfr}#{pdtfr[2]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtbf[2]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[2]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[2]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[2]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[2]}",
+  }
+- $pck3 = { #...,
+  fr: "#{$urlfr}#{pdtfr[3]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtbf[3]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[3]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[3]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[3]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[3]}",
+  }
+- $pck4 = { #...,
+  fr: "#{$urlfr}#{pdtfr[4]}",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{pdtbf[4]}",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{pdtbv[4]}",
+  de: "#{$urlIC[0]+$urlIC[3]}#{pdtde[4]}",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{pdtnl[4]}",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{pdtuk[4]}",
+  }
